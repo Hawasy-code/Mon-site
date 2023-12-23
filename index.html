@@ -1,10 +1,36 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Redirection</title>
-  <meta http-equiv="refresh" content="0; URL='liens.html'" />
+  <title>Accueil</title>
+  <script>
+    function chargerPage(page) {
+      fetch(page)
+        .then(response => response.text())
+        .then(content => {
+          document.getElementById('main-content').innerHTML = content;
+        });
+    }
+    
+    // Charger la page spécifique au chargement de la page index.html
+    window.onload = function() {
+      chargerPage('homepage.html'); 
+    };
+  </script>
 </head>
 <body>
-  <p>Redirection en cours vers ma page principale...</p>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#" onclick="chargerPage('homepage.html')">Accueil</a></li>
+        <li><a href="#" onclick="chargerPage('cv.html')">Cv</a></li>
+        <li><a href="#" onclick="chargerPage('liens.html')">Liens</a></li>
+        <li><a href="#" onclick="chargerPage('projets.html')">Projets</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Div où le contenu sera chargé -->
+  <div id="main-content"></div>
+
 </body>
 </html>
