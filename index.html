@@ -1,38 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Accueil</title>
-  <script>
-    // Fonction pour charger la page spécifique dans une div avec l'id "main-content"
-    function chargerPage(page) {
-      fetch(page)
-        .then(response => response.text())
-        .then(content => {
-          document.getElementById('main-content').innerHTML = content;
-        });
-    }
-  </script>
+  <title>Redirection</title>
+  <meta http-equiv="refresh" content="0; URL='homepage.html'" />
 </head>
 <body>
-  <header>
-    <nav>
-      <ul>
-        <li><a href="#" onclick="chargerPage('homepage.html')">Accueil</a></li>
-         <li><a href="#" onclick="chargerPage('cv.html')">Cv</a></li>
-         <li><a href="#" onclick="chargerPage('liens.html')">Liens</a></li>
-         <li><a href="#" onclick="chargerPage('projets.html')">Projets</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <div id="main-content"></div>
-  
-  <script>
-    // Charger la page d'accueil par défaut au chargement de la page index.html
-    window.onload = function() {
-      chargerPage('homepage.html'); 
-    };
-  </script>
+  <p>Redirection en cours vers votre page principale...</p>
 </body>
 </html>
 
