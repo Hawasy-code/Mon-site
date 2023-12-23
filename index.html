@@ -3,6 +3,7 @@
 <head>
   <title>Accueil</title>
   <script>
+    // Fonction pour charger la page spécifique dans une div avec l'id "main-content"
     function chargerPage(page) {
       fetch(page)
         .then(response => response.text())
@@ -10,16 +11,25 @@
           document.getElementById('main-content').innerHTML = content;
         });
     }
-    
-    // Charger la page spécifique au chargement de la page index.html
+  </script>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#" onclick="chargerPage('votre-page-accueil.html')">Accueil</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div id="main-content"></div>
+  
+  <script>
+    // Charger la page d'accueil par défaut au chargement de la page index.html
     window.onload = function() {
       chargerPage('homepage.html'); 
     };
   </script>
-</head>
-
-  <!-- Div où le contenu sera chargé -->
-  <div id="main-content"></div>
-
 </body>
 </html>
+
