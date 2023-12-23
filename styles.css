@@ -1,0 +1,66 @@
+:root {
+    --accent-color: purple;
+}
+
+body {
+    max-width: 800px;
+    margin: 0 auto; 
+}
+
+h1 {
+    text-align: center;
+    color: var(--accent-color);
+    font-family: sans-serif;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none; 
+    display: flex; 
+}
+
+nav ul li {
+    border: 2px solid var(--accent-color);
+    padding: 0 1em;
+}
+
+nav ul li a {
+    text-decoration: none; 
+    font-weight: bold;
+    color: var(--accent-color);
+}
+
+main {
+    border: 2px solid var(--accent-color); 
+    padding: 1.5em; 
+    border-radius: 0.5em; 
+}
+
+nav ul li {
+    border-top-left-radius: 0.5em;
+    border-top-right-radius: 0.5em; 
+}
+
+nav ul li a.current {
+    border-bottom: 2px solid white; 
+    border-bottom-color: white;
+}
+
+h2 {
+    margin: 0; 
+    border-bottom: 2px dashed var(--accent-color); 
+    padding-bottom: 0.5em;
+    color: var(--accent-color); 
+}
+
+main a {
+    color: var(--accent-color);
+}
+
+footer p {
+    text-align: center;
+    color: gray; 
+    font-size: 0.9em; 
+}
+
